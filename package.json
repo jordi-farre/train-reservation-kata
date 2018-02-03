@@ -12,6 +12,7 @@
   "devDependencies": {
     "body-parser": "^1.18.2",
     "jest": "^22.1.4",
+    "nock": "^9.1.6",
     "supertest": "^3.0.0",
     "ts-jest": "^22.0.2"
   },
