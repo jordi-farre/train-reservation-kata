@@ -4,14 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
     "test": "jest",
-    "start": "tsc & node dist/index.js"
+    "start": "node src/index.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "body-parser": "^1.18.2",
     "jest": "^22.1.4",
+    "supertest": "^3.0.0",
     "ts-jest": "^22.0.2"
   },
   "dependencies": {
