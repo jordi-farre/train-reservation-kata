@@ -4,7 +4,7 @@ var nock = require('nock');
 describe('train reservation', function () {
   var server;
   beforeEach(() => {
-    server = require('../ReserveController');
+    server = require('../App.js');
   });
   afterEach(() => {
     server.close();
