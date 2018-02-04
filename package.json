@@ -12,6 +12,7 @@
   "devDependencies": {
     "body-parser": "^1.18.2",
     "jest": "^22.1.4",
+    "jest-mock-express": "^0.1.1",
     "nock": "^9.1.6",
     "sinon": "^4.2.2",
     "sinon-express-mock": "^2.0.0",

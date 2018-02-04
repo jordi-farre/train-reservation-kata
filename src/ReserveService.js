@@ -1,6 +1,6 @@
 module.exports = class ReserveService {
 
-  reserve(reservation) {
+  reserve(request, responseCallback) {
   }
 
 }
