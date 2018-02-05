@@ -1,6 +1,6 @@
 const express = require('express');
 const  bodyParser = require('body-parser');
-const ReserveController = require("./ReserveController");
+import { ReserveController } from "./ReserveController";
 
 
 const  app = express();

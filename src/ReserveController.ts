@@ -1,6 +1,8 @@
-const Reservation = require("./Reservation");
+import { Reservation } from "./Reservation"
 
-module.exports = class ReserveController {
+export class ReserveController {
+
+  reserveService;
 
   constructor(reserveService) {
     this.reserveService = reserveService;

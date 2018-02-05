@@ -1,4 +1,4 @@
-module.exports = class ReserveService {
+export class ReserveService {
 
   reserve(request, responseCallback) {
   }

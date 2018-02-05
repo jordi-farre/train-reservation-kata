@@ -1,4 +1,8 @@
-module.exports = class ReservationResponse {
+export class ReservationResponse {
+
+  trainId: string;
+  bookingReference: string;
+  seats: string[];
 
   constructor(trainId, bookingReference, seats) {
     this.trainId = trainId;
