@@ -13,7 +13,7 @@ const response = mockRes();
 test('should reserve seats on train', () => {
   const request = {"body": {"train_id": "express_2000", "number_seats": 2}};
   reserveController.reserve(request, response);
-  //reserveSpy.mock.calls[0][1](new ReservationResponse("express_2000", "75bcd15", ["1A", "1B"]))
+  reserveSpy.mock.calls[0][1](new ReservationResponse("express_2000", "75bcd15", ["1A", "1B"]))
 
   expect(reserveSpy).toHaveBeenCalledWith(expectedReservation, expect.any(Function));
   expect(response.status).toHaveBeenCalledWith(200);
