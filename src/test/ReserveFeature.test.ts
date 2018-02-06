@@ -1,10 +1,21 @@
-const fs = require("fs");
-var supertest = require('supertest');
-var nock = require('nock');
-const app = require("../App");
-const path = require("path");
+import * as fs from "fs";
+import * as supertest from "supertest";
+import * as nock from "nock";
+import { Application } from "../Application";
+import * as path from "path";
 
 const request = supertest("http://localhost:3000");
+
+var application;
+
+beforeAll(() => {
+  application = new Application();
+  application.start();
+});
+
+afterAll(() => {
+  application.stop();
+});
 
 describe('train reservation', function () {
   it('with available seats', (done) => {
@@ -24,5 +35,6 @@ describe('train reservation', function () {
       .post('/reserve')
       .send({train_id: '123', number_seats: 2})
       .expect({train_id: '123', booking_reference: 'booking_ref', seats: ['1A', '2A']}, done);
+
   });
 });
