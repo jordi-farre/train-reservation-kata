@@ -9,7 +9,7 @@ export class ReserveController {
   }
 
   reserve(request, response) {
-    const reservation = new Reservation(request.body.train_id, request.body.number_seats);
+    const reservation = {"trainId": request.body.train_id, "numberSeats": request.body.number_seats};
     this.reserveService.reserve(reservation, (reservationResponse) => {
       response
         .status(200)
